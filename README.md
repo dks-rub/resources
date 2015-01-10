@@ -1,5 +1,5 @@
-#Resources
+# Resources
 Hier können alle Sachen gespeichert werden die nicht direckt mit den Projekten zutun haben
 
-##Inhalt
+## Inhalt
 - Grafiken zu Projekten
