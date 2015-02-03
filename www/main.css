@@ -16,6 +16,22 @@
 	background: url('img/rub1.jpg') no-repeat center center;
 }
 
+#meshchat{
+	background: url('img/meshchat_big.jpg') no-repeat center center;
+}
+
+#signalgenerator{
+	background: url('img/signalgenerator_big.jpg') no-repeat center center;
+}
+
+#fourieranalyzer{
+	background: url('img/fft_big.jpg') no-repeat center center;
+}
+
+#faq{
+	background: url('img/faq_big.jpg') no-repeat center center;
+}
+
 .spacer {
     margin-top: 40px; /* define margin as you see fit */
 }
@@ -27,3 +43,8 @@
 .muted{
 	color: #999;
 }
+
+.faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }

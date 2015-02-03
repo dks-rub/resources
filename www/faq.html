@@ -14,7 +14,7 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
   <div class="container">
@@ -23,12 +23,12 @@
   	</div>
   </div>
   <div class="container-fluid">
-	<div class="jumbotron" id="intro">
+	<div class="jumbotron" id="faq">
 		<div class="container">
-			<h1>Haufig gestellte Fragen</h1>
-			<p>Diese Seite soll einen kleinen Einblick in die Arbeit der Studentischen Hilfskräfte des <a href="https://www.dks.ruhr-uni-bochum.de/" title="Lehrstuhl für Digitale Kommunikationssystene">Lehrstuhls für Digitale Kommunikationssysteme</a>. Darüber hinaus soll dies eine Plattform darstellen, um alle benötigten Informationen zu den Android Apps zu bekommen.</p>
+			<h1>Häufig gestellte Fragen</h1>
+			<p>Viele Fragen die ihr euch vielleicht stellt, könnten hier schon beantwortet sein. Falls euch diese Seite nicht hilft, schreibt uns einfach eine Email oder klickt auf den Button.</p>
 			<p>
-				<a href="aboutus.html" class="btn btn-primary btn-lg">Erfahre mehr</a>
+				<a href="mailto:android@dks.rub.de?subject=FAQ:" class="btn btn-danger btn-lg">Hilfe!</a>
 			</p>
 		</div>
 	</div>
@@ -60,60 +60,167 @@
     </nav>
 
 	<div class="row">
-		<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-			<div class="thumbnail">
-				<img data-src="img/meshchat1.png" alt="" src="img/meshchat7.png">
-				<div class="caption">
-					<h3>MeshChat</h3>
-					<p>
-						Der MeshChat ist ein Chatsystem ohne Server.
-						Alle die Teilnehmer die sich in dem gleichen Netzwerk befinden können mit einander chatten.
-						Bald soll das ganze auch ohne Netzwerkverbindung möglich sein.
-					</p>
-					<p><a href="meshchat.html" class="btn btn-primary">Lerne mehr</a></p>
-				</div>
-			</div>
-		</div>
 
-		<div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-			<div class="thumbnail">
-				<img data-src="img/meshchat1.png" alt="" src="img/signalgenerator2.png">
-				<div class="caption">
-					<h3>Signalgenerator</h3>
-					<p>
-						Mit dem Signalgenerator können verschiedenste Signale überlagert werden. Die dabei neu entstehenden Signale kann man dabei betrachten und sogar hören.
-					</p>
-					<p><a href="signalgenerator.html" class="btn btn-primary">Lerne mehr</a></p>
-				</div>
-			</div>
-		</div>
-
-		
-	   <div class="col-xs-11 col-sm-11 col-md-4 col-lg-4">
-			<div class="thumbnail">
-				<img data-src="img/meshchat1.png" alt="" src="img/fft1.png">
-				<div class="caption">
-					<h3>FourierAnalyzer</h3>
-					<p>
-						Mit dem FourierAnalyzer kann man Töne aufnehmen und sich daraus die Fourier Transformierte berechnen lassen.
-						Nach dem Aufnehmen lassen sich das Signal wieder abspielen.
-					</p>
-					<p><a href="fourieranalyzer.html" class="btn btn-primary">Lerne mehr</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="footer">
 		<div class="container">
-			<p class="muted credit pull-left">
-				&copy; <a href="https://www.dks.ruhr-uni-bochum.de/">Lehrstuhl für Digitale Kommunikationssysteme</a>
-			</p>
-			<p class="muted credit pull-right">
-				Design: Tim Guenther
-			</p>
+
+		    <div class="alert alert-warning alert-dismissible" role="alert">
+		    	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        Bitte beachtet, das sich die meisten Apps noch in einer sehr frühen <strong>Beta</strong>-Phase befinden. Bitte schreibt uns falls ihr Fehler oder Verbesserungen habt. 
+		    </div>
+
+		    <div class="panel-group" id="accordion">
+		        <div class="faqHeader">Allgemeine Fragen</div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Wie installiere ich eine App?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseOne" class="panel-collapse collapse in">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Was bedeutet &quot;Unbekannte Herkunft&quot;?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseTen" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Wie bekommen die Apps Updates?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseEleven" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    Test
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="faqHeader">MeshChat</div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Was ist ein Mesh-Netzwerk?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseTwo" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Was ist IP-Multicast?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseThree" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Warum kann ich nicht im <strong>eduroam</strong> chatten?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseFive" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Wie soll es in Zukunft weiter gehen?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseSix" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Ist der MeshChat sicher?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseEight" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">frage 6<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseNine" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="faqHeader">Signalgenerator</div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Warum höre ich ein wackeln im Ton bei hohen Frequenzen?<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseFour" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    Das liegt an der Sample-Rate die wir fest eingestellt haben. Aus Performance Gründen ist diese noch zu niedrig. Unser Ziel ist es diese feste Einstellung in ein Untermenü zu verlegen, so das jeder sie an die Performance seines Geräts anpassen kann.
+		                </div>
+		            </div>
+		        </div>
+		        <div class="panel panel-default">
+		            <div class="panel-heading">
+		                <h4 class="panel-title">
+		                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">frage 2<span class="caret pull-right"></span></a>
+		                </h4>
+		            </div>
+		            <div id="collapseSeven" class="panel-collapse collapse">
+		                <div class="panel-body">
+		                    test
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 		</div>
-	</div>
+			</div>
+
+			<div class="footer">
+				<div class="container">
+					<p class="muted credit pull-left">
+						&copy; <a href="https://www.dks.ruhr-uni-bochum.de/">Lehrstuhl für Digitale Kommunikationssysteme</a>
+					</p>
+					<p class="muted credit pull-right">
+						Design: Tim Guenther
+					</p>
+				</div>
+			</div>
 
    </div>
 
