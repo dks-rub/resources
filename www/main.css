@@ -32,6 +32,10 @@
 	background: url('img/faq_big.jpg') no-repeat center center;
 }
 
+#award{
+	background: url('img/award_big.jpg') no-repeat center center;
+}
+
 .spacer {
     margin-top: 40px; /* define margin as you see fit */
 }
