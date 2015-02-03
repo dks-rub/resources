@@ -1,0 +1,29 @@
+.page-header{
+	text-align: center;
+}
+
+.jumbotron{
+	color: white; 
+	padding-top: 500px;
+	padding-bottom: 40px;
+}
+
+#home{
+	background: url('img/id.jpg') no-repeat center center;
+}
+
+#aboutus{
+	background: url('img/rub1.jpg') no-repeat center center;
+}
+
+.spacer {
+    margin-top: 40px; /* define margin as you see fit */
+}
+
+.credit{
+	margin: 20px 0px;
+}
+
+.muted{
+	color: #999;
+}
