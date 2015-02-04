@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -67,10 +67,10 @@
 
     <!-- PHP Script schreiben fuer dynamisches anpassen des ladebalkens -->
     <div class="container">
-      <p>Der Wettbewerb startet am <strong id="start">22.10.2014</strong> und endet am <strong id="end">06.02.2015</strong>.</p>
+      <p>Der Wettbewerb startet am <strong id="start">10.10.2014</strong> und endet am <strong id="end">06.02.2015</strong>.</p>
       <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-          <p id="">90%</p>
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" id="progressbar">
+          <p id="progress-label">90%</p>
         </div>
       </div>
       <div>
@@ -153,8 +153,57 @@
    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>    
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>    
     <!-- Latest compiled and minified JavaScript -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!-- Automatic Progressbar -->
+    <script type="text/javascript">
+      $(function(){
+        var start = $("#start").text();
+        var end = $("#end").text();
+
+        var today = new Date();
+
+        //Parse Data
+        var day, month, year;
+
+        day = parseInt(start.substring(0,2));
+        month = parseInt(start.substring(3,5));
+        year = parseInt(start.substring(6));
+
+        var startDate = new Date(year, month-1, day+1);
+
+        day = parseInt(end.substring(0,2));
+        month = parseInt(end.substring(3,5));
+        year = parseInt(end.substring(6));
+
+        var endDate = new Date(year, month-1, day+1);
+
+        var period = endDate.getTime() - startDate.getTime();
+
+        var progress = Math.floor(((today.getTime()-startDate.getTime())/period)*100);
+
+        if(progress <= 75){
+          //Sucess
+          $("#progressbar").addClass('progress-bar-success');
+          $("#progress-label").text(progress+"%");
+          $("#progressbar").width(progress+"%");
+        }else if((progress < 90)&&(progress >75)){
+          //Warning
+          $("#progressbar").addClass('progress-bar-warning');
+          $("#progress-label").text(progress+"%");
+          $("#progressbar").width(progress+"%");
+        } else if((progress >= 90)&&(progress <= 100)){
+          //Danger
+          $("#progressbar").addClass('progress-bar-danger');
+          $("#progress-label").text(progress+"%");
+          $("#progressbar").width(progress+"%");
+        } else if(today.getTime()>endDate.getDate()){
+          $("#progressbar").addClass('progress-bar-success');
+          $("#progress-label").text("Wettbewerb beendet");
+          $("#progressbar").width("100%");
+        }
+      });
+    </script>
   </body>
 </html>
