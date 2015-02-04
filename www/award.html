@@ -65,9 +65,9 @@
     	</div><!-- /.navbar-collapse -->
     </nav>
 
-    <!-- PHP Script schreiben fuer dynamisches anpassen des ladebalkens -->
+    <!-- WS15/16 - 19.10.2015 - 12.02.2016-->
     <div class="container">
-      <p>Der Wettbewerb startet am <strong id="start">10.10.2014</strong> und endet am <strong id="end">06.02.2015</strong>.</p>
+      <p>Der Wettbewerb startet am <strong id="start">01.11.2015</strong> und endet am <strong id="end">01.02.2016</strong>.</p>
       <div class="progress">
         <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;" id="progressbar">
           <p id="progress-label">90%</p>
@@ -171,19 +171,19 @@
         month = parseInt(start.substring(3,5));
         year = parseInt(start.substring(6));
 
-        var startDate = new Date(year, month-1, day+1);
+        var startDate = new Date(year, month-1, day-1);
 
         day = parseInt(end.substring(0,2));
         month = parseInt(end.substring(3,5));
         year = parseInt(end.substring(6));
 
-        var endDate = new Date(year, month-1, day+1);
+        var endDate = new Date(year, month-1, day-1);
 
         var period = endDate.getTime() - startDate.getTime();
 
         var progress = Math.floor(((today.getTime()-startDate.getTime())/period)*100);
 
-        if(progress <= 75){
+        if((progress <= 75)&&(progress >= 0)){
           //Sucess
           $("#progressbar").addClass('progress-bar-success');
           $("#progress-label").text(progress+"%");
@@ -198,9 +198,13 @@
           $("#progressbar").addClass('progress-bar-danger');
           $("#progress-label").text(progress+"%");
           $("#progressbar").width(progress+"%");
-        } else if(today.getTime()>endDate.getDate()){
+        } else if(today.getTime() > endDate.getTime()){
+          //End
           $("#progressbar").addClass('progress-bar-success');
           $("#progress-label").text("Wettbewerb beendet");
+          $("#progressbar").width("100%");
+        } else if(today.getTime() < startDate.getTime()){
+          $("#progress-label").text("Wettbewerb hat noch nicht begonnen");
           $("#progressbar").width("100%");
         }
       });
